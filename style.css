@@ -1,0 +1,483 @@
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color:  #f5f0e8;
+    color: #1e1208;
+    overflow-x: hidden;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 70px;
+    background-color: #d8c4a8;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: #3b2314;
+    letter-spacing: 1px;
+}
+
+.nav-right {
+    display: flex;
+    gap: 36px;
+}
+
+.nav-right a {
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1e1208;
+    transition: color 0.2s;
+}
+
+.nav-right a:hover {
+    color: #c07a3a;
+}
+
+.hero {
+    width: 100%;
+    height: 480px;
+    background-image: url('https://img.fitimg.in/fitpass/blogs1778130622-zmmt2pt3cpfuvyp8pw2e.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, rgba(0,0,0,0.55) 50%, transparent 100%);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 100px;
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 1.15;
+    margin-bottom: 16px;
+}
+
+.hero-content p {
+    font-size: 12px;
+    color: rgba(255,255,255,0.85);
+    line-height: 1.7;
+    max-width: 380px;
+    margin-bottom: 24px;
+}
+
+.hero-btns {
+    display: flex;
+    gap: 14px;
+}
+
+.btn-outline {
+    padding: 9px 22px;
+    border-radius: 22px;
+    border: 2px solid #ffffff;
+    background: transparent;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-outline:hover {
+    background: #ffffff;
+    color: #3b2314;
+}
+
+.btn-fill {
+    padding: 9px 22px;
+    border-radius: 22px;
+    border: none;
+    background-color: #c07a3a;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-fill:hover {
+    background-color: #7b4a2d;
+}
+
+
+.features {
+    background-color: #ede8de;
+    padding: 60px 70px;
+    text-align: center;
+}
+
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    font-weight: 700;
+    color: #1e1208;
+    margin-bottom: 40px;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+}
+
+.feature-card {
+    flex: 1;
+    padding: 20px 28px;
+    border-right: 2px solid #d8c4a8;
+}
+
+.feature-card:last-child {
+    border-right: none;
+}
+
+.feature-icon {
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background-color: #3b2314;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px auto;
+    overflow: hidden;
+}
+
+.feature-icon img {
+    width: 34px;
+    height: 34px;
+    filter: invert(1) brightness(2);
+}
+
+.feature-card h4 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #1e1208;
+}
+
+.feature-card p {
+    font-size: 11px;
+    color: #5a3e2b;
+    line-height: 1.7;
+}
+
+
+.why-section {
+    display: flex;
+    height: 380px;
+}
+
+
+.why-left {
+    flex: 1;
+    display: flex;
+    background-color: #3b2314;
+}
+
+.why-text {
+    flex: 1;
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #d8c4a8;
+}
+
+.why-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.2;
+    margin-bottom: 14px;
+}
+
+.why-text p {
+    font-size: 11px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 20px;
+}
+
+.btn-light {
+    align-self: flex-start;
+    padding: 9px 20px;
+    border-radius: 22px;
+    border: 2px solid #d8c4a8;
+    background: transparent;
+    color: #d8c4a8;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: all 0.2s;
+}
+
+.btn-light:hover {
+    background: #d8c4a8;
+    color: #3b2314;
+}
+
+.why-img {
+    flex: 1;
+    overflow: hidden;
+}
+
+.why-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.why-right {
+    flex: 1;
+    background-color:  #f5f0e8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 50px;
+    text-align: center;
+}
+
+.why-right h4 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #5a3e2b;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.why-right h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #1e1208;
+    margin-bottom: 16px;
+}
+
+.why-right p {
+    font-size: 12px;
+    color: #5a3e2b;
+    line-height: 1.8;
+    margin-bottom: 24px;
+    max-width: 340px;
+}
+
+.btn-dark {
+    padding: 10px 24px;
+    border-radius: 22px;
+    border: none;
+    background-color: #3b2314;
+    color:  #f5f0e8;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: background 0.2s;
+}
+
+.btn-dark:hover {
+    background-color: #7b4a2d;
+}
+
+
+.visit-section {
+    display: flex;
+    align-items: center;
+    padding: 60px 70px;
+    background-color: #ede8de;
+    gap: 60px;
+}
+
+.visit-left {
+    flex: 1;
+    max-width: 360px;
+}
+
+.visit-tag {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 500;
+    color: #c07a3a;
+    margin-bottom: 10px;
+}
+
+.visit-left h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: #1e1208;
+    margin-bottom: 14px;
+}
+
+.visit-left p {
+    font-size: 12px;
+    color: #5a3e2b;
+    line-height: 1.8;
+    margin-bottom: 24px;
+}
+
+.visit-btns {
+    display: flex;
+    gap: 14px;
+}
+
+.btn-outline-dark {
+    padding: 9px 20px;
+    border-radius: 22px;
+    border: 2px solid #3b2314;
+    background: transparent;
+    color: #3b2314;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: all 0.2s;
+}
+
+.btn-outline-dark:hover {
+    background: #3b2314;
+    color: #ffffff;
+}
+
+.visit-right {
+    flex: 2;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+}
+
+.menu-card {
+    background: #ffffff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+
+.menu-card img {
+    width: 100%;
+    height: 130px;
+    object-fit: cover;
+}
+
+.menu-info {
+    padding: 10px 12px;
+}
+
+.menu-name {
+    font-size: 13px;
+    font-weight: 600;
+    color: #1e1208;
+}
+
+.menu-sub {
+    font-size: 11px;
+    color: #5a3e2b;
+    margin: 3px 0;
+}
+
+.menu-num {
+    font-size: 11px;
+    color: #c07a3a;
+    font-weight: 500;
+}
+
+
+.footer-banner {
+    display: flex;
+    height: 300px;
+    background-color: #3b2314;
+    overflow: hidden;
+}
+
+.footer-banner-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 60px;
+    color: #d8c4a8;
+}
+
+.footer-banner-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-bottom: 12px;
+}
+
+.footer-banner-content p {
+    font-size: 11px;
+    color: rgba(255,255,255,0.65);
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+}
+
+.footer-small {
+    font-size: 10px;
+    color: rgba(255,255,255,0.45) !important;
+    margin-bottom: 20px !important;
+}
+
+.btn-footer {
+    align-self: flex-start;
+    padding: 9px 20px;
+    border-radius: 22px;
+    border: 2px solid #d8c4a8;
+    background: transparent;
+    color: #d8c4a8;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: all 0.2s;
+}
+
+.btn-footer:hover {
+    background: #d8c4a8;
+    color: #3b2314;
+}
+
+.footer-banner-img {
+    flex: 1.2;
+    overflow: hidden;
+}
+
+.footer-banner-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.75;
+}
