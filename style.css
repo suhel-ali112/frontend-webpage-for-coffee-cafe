@@ -1,32 +1,199 @@
-*, *::before, *::after {
+/* =====================================================
+   CARDABUN COFFEE - STYLESHEET
+
+   1. Variables & reset
+   2. Base
+   3. Buttons
+   4. Navbar
+   5. Hero
+   6. Features
+   7. Why choose us
+   8. Visit / menu
+   9. Footer banner
+   10. Responsive (laptop, tablet, mobile, small phone)
+   ===================================================== */
+
+
+/* =====================================================
+   1. VARIABLES & RESET
+   ===================================================== */
+:root {
+    /* Colors */
+    --cream:      #f5f0e8;
+    --sand:       #ede8de;
+    --tan:        #d8c4a8;
+    --brown-dark: #3b2314;
+    --brown-mid:  #7b4a2d;
+    --accent:     #c07a3a;
+    --text:       #1e1208;
+    --text-soft:  #5a3e2b;
+    --white:      #ffffff;
+
+    /* Fonts */
+    --font-heading: 'Playfair Display', serif;
+    --font-body:    'Poppins', sans-serif;
+}
+
+*,
+*::before,
+*::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
+/* =====================================================
+   2. BASE
+   ===================================================== */
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color:  #f5f0e8;
-    color: #1e1208;
+    font-family: var(--font-body);
+    background-color: var(--cream);
+    color: var(--text);
     overflow-x: hidden;
 }
 
+img {
+    max-width: 100%;
+}
+
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 40px;
+}
+
+
+/* =====================================================
+   3. BUTTONS
+   ===================================================== */
+
+/* White outline (on dark/hero backgrounds) */
+.btn-outline {
+    padding: 9px 22px;
+    border-radius: 22px;
+    border: 2px solid var(--white);
+    background: transparent;
+    color: var(--white);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-outline:hover {
+    background: var(--white);
+    color: var(--brown-dark);
+}
+
+/* Filled orange */
+.btn-fill {
+    padding: 9px 22px;
+    border-radius: 22px;
+    border: none;
+    background-color: var(--accent);
+    color: var(--white);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-fill:hover {
+    background-color: var(--brown-mid);
+}
+
+/* Tan outline (on dark brown backgrounds) */
+.btn-light,
+.btn-footer {
+    align-self: flex-start;
+    padding: 9px 20px;
+    border-radius: 22px;
+    border: 2px solid var(--tan);
+    background: transparent;
+    color: var(--tan);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-footer {
+    font-size: 11px;
+}
+
+.btn-light:hover,
+.btn-footer:hover {
+    background: var(--tan);
+    color: var(--brown-dark);
+}
+
+/* Dark filled (on light backgrounds) */
+.btn-dark {
+    padding: 10px 24px;
+    border-radius: 22px;
+    border: none;
+    background-color: var(--brown-dark);
+    color: var(--cream);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn-dark:hover {
+    background-color: var(--brown-mid);
+}
+
+/* Dark outline (on light backgrounds) */
+.btn-outline-dark {
+    padding: 9px 20px;
+    border-radius: 22px;
+    border: 2px solid var(--brown-dark);
+    background: transparent;
+    color: var(--brown-dark);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-outline-dark:hover {
+    background: var(--brown-dark);
+    color: var(--white);
+}
+
+
+/* =====================================================
+   4. NAVBAR
+   ===================================================== */
 nav {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 18px 70px;
-    background-color: #d8c4a8;
+    background-color: var(--tan);
     position: sticky;
     top: 0;
     z-index: 100;
 }
 
+.nav-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
 .logo {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-heading);
     font-size: 22px;
     font-weight: 700;
-    color: #3b2314;
+    color: var(--brown-dark);
     letter-spacing: 1px;
 }
 
@@ -39,30 +206,46 @@ nav {
     text-decoration: none;
     font-size: 14px;
     font-weight: 500;
-    color: #1e1208;
+    color: var(--text);
     transition: color 0.2s;
 }
 
 .nav-right a:hover {
-    color: #c07a3a;
+    color: var(--accent);
 }
 
+/* Hamburger button - hidden on desktop, shown on mobile */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 22px;
+    color: var(--brown-dark);
+    cursor: pointer;
+    padding: 4px 8px;
+}
+
+
+/* =====================================================
+   5. HERO
+   ===================================================== */
 .hero {
+    position: relative;
+    display: flex;
+    align-items: center;
     width: 100%;
-    height: 480px;
+    min-height: 480px;
     background-image: url('https://img.fitimg.in/fitpass/blogs1778130622-zmmt2pt3cpfuvyp8pw2e.png');
     background-size: cover;
     background-position: center;
-    display: flex;
-    align-items: center;
-    position: relative;
 }
 
+/* Dark gradient so the text is readable */
 .hero::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(to right, rgba(0,0,0,0.55) 50%, transparent 100%);
+    background: linear-gradient(to right, rgba(0, 0, 0, 0.55) 50%, transparent 100%);
 }
 
 .hero-content {
@@ -73,17 +256,17 @@ nav {
 }
 
 .hero-content h1 {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-heading);
     font-size: 48px;
     font-weight: 800;
-    color: #ffffff;
+    color: var(--white);
     line-height: 1.15;
     margin-bottom: 16px;
 }
 
 .hero-content p {
     font-size: 12px;
-    color: rgba(255,255,255,0.85);
+    color: rgba(255, 255, 255, 0.85);
     line-height: 1.7;
     max-width: 380px;
     margin-bottom: 24px;
@@ -94,52 +277,14 @@ nav {
     gap: 14px;
 }
 
-.btn-outline {
-    padding: 9px 22px;
-    border-radius: 22px;
-    border: 2px solid #ffffff;
-    background: transparent;
-    color: #ffffff;
-    font-size: 13px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.2s;
-}
 
-.btn-outline:hover {
-    background: #ffffff;
-    color: #3b2314;
-}
-
-.btn-fill {
-    padding: 9px 22px;
-    border-radius: 22px;
-    border: none;
-    background-color: #c07a3a;
-    color: #ffffff;
-    font-size: 13px;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background 0.2s;
-}
-
-.btn-fill:hover {
-    background-color: #7b4a2d;
-}
-
-
+/* =====================================================
+   6. FEATURES
+   ===================================================== */
 .features {
-    background-color: #ede8de;
+    background-color: var(--sand);
     padding: 60px 70px;
     text-align: center;
-}
-
-.section-title {
-    font-family: 'Playfair Display', serif;
-    font-size: 32px;
-    font-weight: 700;
-    color: #1e1208;
-    margin-bottom: 40px;
 }
 
 .features-grid {
@@ -151,7 +296,7 @@ nav {
 .feature-card {
     flex: 1;
     padding: 20px 28px;
-    border-right: 2px solid #d8c4a8;
+    border-right: 2px solid var(--tan);
 }
 
 .feature-card:last-child {
@@ -159,14 +304,14 @@ nav {
 }
 
 .feature-icon {
-    width: 62px;
-    height: 62px;
-    border-radius: 50%;
-    background-color: #3b2314;
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 62px;
+    height: 62px;
     margin: 0 auto 16px auto;
+    border-radius: 50%;
+    background-color: var(--brown-dark);
     overflow: hidden;
 }
 
@@ -177,74 +322,58 @@ nav {
 }
 
 .feature-card h4 {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-heading);
     font-size: 18px;
     font-weight: 700;
+    color: var(--text);
     margin-bottom: 10px;
-    color: #1e1208;
 }
 
 .feature-card p {
     font-size: 11px;
-    color: #5a3e2b;
+    color: var(--text-soft);
     line-height: 1.7;
 }
 
 
+/* =====================================================
+   7. WHY CHOOSE US
+   ===================================================== */
 .why-section {
     display: flex;
-    height: 380px;
+    min-height: 380px;
 }
 
-
+/* ----- Left half (dark brown) ----- */
 .why-left {
     flex: 1;
     display: flex;
-    background-color: #3b2314;
+    background-color: var(--brown-dark);
 }
 
 .why-text {
     flex: 1;
-    padding: 40px 32px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    color: #d8c4a8;
+    padding: 40px 32px;
+    color: var(--tan);
 }
 
 .why-text h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-heading);
     font-size: 28px;
     font-weight: 700;
-    color: #ffffff;
+    color: var(--white);
     line-height: 1.2;
     margin-bottom: 14px;
 }
 
 .why-text p {
     font-size: 11px;
+    color: rgba(255, 255, 255, 0.75);
     line-height: 1.8;
-    color: rgba(255,255,255,0.75);
     margin-bottom: 20px;
-}
-
-.btn-light {
-    align-self: flex-start;
-    padding: 9px 20px;
-    border-radius: 22px;
-    border: 2px solid #d8c4a8;
-    background: transparent;
-    color: #d8c4a8;
-    font-size: 12px;
-    font-weight: 600;
-    cursor: pointer;
-    letter-spacing: 0.5px;
-    transition: all 0.2s;
-}
-
-.btn-light:hover {
-    background: #d8c4a8;
-    color: #3b2314;
 }
 
 .why-img {
@@ -258,68 +387,56 @@ nav {
     object-fit: cover;
 }
 
+/* ----- Right half (cream) ----- */
 .why-right {
     flex: 1;
-    background-color:  #f5f0e8;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     padding: 40px 50px;
+    background-color: var(--cream);
     text-align: center;
 }
 
 .why-right h4 {
     font-size: 14px;
     font-weight: 500;
-    color: #5a3e2b;
-    margin-bottom: 8px;
+    color: var(--text-soft);
     text-transform: uppercase;
     letter-spacing: 1px;
+    margin-bottom: 8px;
 }
 
 .why-right h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-heading);
     font-size: 30px;
     font-weight: 700;
-    color: #1e1208;
+    color: var(--text);
     margin-bottom: 16px;
 }
 
 .why-right p {
+    max-width: 340px;
     font-size: 12px;
-    color: #5a3e2b;
+    color: var(--text-soft);
     line-height: 1.8;
     margin-bottom: 24px;
-    max-width: 340px;
-}
-
-.btn-dark {
-    padding: 10px 24px;
-    border-radius: 22px;
-    border: none;
-    background-color: #3b2314;
-    color:  #f5f0e8;
-    font-size: 12px;
-    font-weight: 600;
-    cursor: pointer;
-    letter-spacing: 0.5px;
-    transition: background 0.2s;
-}
-
-.btn-dark:hover {
-    background-color: #7b4a2d;
 }
 
 
+/* =====================================================
+   8. VISIT / MENU
+   ===================================================== */
 .visit-section {
     display: flex;
     align-items: center;
-    padding: 60px 70px;
-    background-color: #ede8de;
     gap: 60px;
+    padding: 60px 70px;
+    background-color: var(--sand);
 }
 
+/* ----- Left: text ----- */
 .visit-left {
     flex: 1;
     max-width: 360px;
@@ -329,21 +446,21 @@ nav {
     display: inline-block;
     font-size: 12px;
     font-weight: 500;
-    color: #c07a3a;
+    color: var(--accent);
     margin-bottom: 10px;
 }
 
 .visit-left h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-heading);
     font-size: 30px;
     font-weight: 700;
-    color: #1e1208;
+    color: var(--text);
     margin-bottom: 14px;
 }
 
 .visit-left p {
     font-size: 12px;
-    color: #5a3e2b;
+    color: var(--text-soft);
     line-height: 1.8;
     margin-bottom: 24px;
 }
@@ -353,24 +470,7 @@ nav {
     gap: 14px;
 }
 
-.btn-outline-dark {
-    padding: 9px 20px;
-    border-radius: 22px;
-    border: 2px solid #3b2314;
-    background: transparent;
-    color: #3b2314;
-    font-size: 12px;
-    font-weight: 600;
-    cursor: pointer;
-    letter-spacing: 0.5px;
-    transition: all 0.2s;
-}
-
-.btn-outline-dark:hover {
-    background: #3b2314;
-    color: #ffffff;
-}
-
+/* ----- Right: menu cards ----- */
 .visit-right {
     flex: 2;
     display: grid;
@@ -379,10 +479,10 @@ nav {
 }
 
 .menu-card {
-    background: #ffffff;
+    background: var(--white);
     border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
 }
 
 .menu-card img {
@@ -398,26 +498,29 @@ nav {
 .menu-name {
     font-size: 13px;
     font-weight: 600;
-    color: #1e1208;
+    color: var(--text);
 }
 
 .menu-sub {
     font-size: 11px;
-    color: #5a3e2b;
+    color: var(--text-soft);
     margin: 3px 0;
 }
 
 .menu-num {
     font-size: 11px;
-    color: #c07a3a;
     font-weight: 500;
+    color: var(--accent);
 }
 
 
+/* =====================================================
+   9. FOOTER BANNER
+   ===================================================== */
 .footer-banner {
     display: flex;
-    height: 300px;
-    background-color: #3b2314;
+    min-height: 300px;
+    background-color: var(--brown-dark);
     overflow: hidden;
 }
 
@@ -427,47 +530,28 @@ nav {
     flex-direction: column;
     justify-content: center;
     padding: 40px 60px;
-    color: #d8c4a8;
+    color: var(--tan);
 }
 
 .footer-banner-content h2 {
-    font-family: 'Playfair Display', serif;
+    font-family: var(--font-heading);
     font-size: 28px;
     font-weight: 700;
-    color: #ffffff;
+    color: var(--white);
     margin-bottom: 12px;
 }
 
 .footer-banner-content p {
     font-size: 11px;
-    color: rgba(255,255,255,0.65);
+    color: rgba(255, 255, 255, 0.65);
     letter-spacing: 0.5px;
     margin-bottom: 6px;
 }
 
 .footer-small {
     font-size: 10px;
-    color: rgba(255,255,255,0.45) !important;
+    color: rgba(255, 255, 255, 0.45) !important;
     margin-bottom: 20px !important;
-}
-
-.btn-footer {
-    align-self: flex-start;
-    padding: 9px 20px;
-    border-radius: 22px;
-    border: 2px solid #d8c4a8;
-    background: transparent;
-    color: #d8c4a8;
-    font-size: 11px;
-    font-weight: 600;
-    cursor: pointer;
-    letter-spacing: 0.5px;
-    transition: all 0.2s;
-}
-
-.btn-footer:hover {
-    background: #d8c4a8;
-    color: #3b2314;
 }
 
 .footer-banner-img {
@@ -480,4 +564,135 @@ nav {
     height: 100%;
     object-fit: cover;
     opacity: 0.75;
+}
+
+
+/* =====================================================
+   10. RESPONSIVE
+   Each block only overrides what changes at that width.
+   ===================================================== */
+
+/* ---------- Laptop / small desktop (up to 1100px) ---------- */
+@media (max-width: 1100px) {
+    nav { padding: 16px 40px; }
+    .nav-right { gap: 24px; }
+
+    .hero-content { padding: 0 60px; }
+
+    .features { padding: 50px 40px; }
+    .feature-card { padding: 20px 16px; }
+
+    .visit-section { padding: 50px 40px; gap: 36px; }
+    .visit-right { grid-template-columns: repeat(2, 1fr); }
+}
+
+
+/* ---------- Tablet (up to 900px) ---------- */
+@media (max-width: 900px) {
+
+    /* Features: 2 x 2 grid */
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 10px;
+    }
+    .feature-card { padding: 20px 24px; border-right: none; }
+    .feature-card:nth-child(odd) { border-right: 2px solid var(--tan); }
+    .feature-card:nth-child(-n+2) { border-bottom: 2px solid var(--tan); }
+    .feature-card p { font-size: 13px; }
+
+    /* Why section: stack top to bottom */
+    .why-section { flex-direction: column; min-height: 0; }
+    .why-left { min-height: 320px; }
+    .why-right { padding: 50px 40px; }
+    .why-text p,
+    .why-right p { font-size: 13px; }
+
+    /* Visit section: stack, 4 cards in a row */
+    .visit-section { flex-direction: column; align-items: stretch; }
+    .visit-left { max-width: none; }
+    .visit-left p { max-width: 520px; font-size: 13px; }
+    .visit-right { grid-template-columns: repeat(4, 1fr); }
+
+    /* Footer banner: stack */
+    .footer-banner { flex-direction: column; min-height: 0; }
+    .footer-banner-content { padding: 40px; }
+    .footer-banner-content p { font-size: 13px; }
+    .footer-small { font-size: 11px; }
+    .footer-banner-img { flex: none; height: 260px; }
+}
+
+
+/* ---------- Mobile (up to 700px) ---------- */
+@media (max-width: 700px) {
+
+    /* Navbar: hamburger menu */
+    nav { padding: 14px 20px; flex-wrap: wrap; }
+    .nav-toggle { display: block; }
+
+    .nav-right {
+        display: none;
+        flex-direction: column;
+        gap: 0;
+        width: 100%;
+        margin-top: 12px;
+        border-top: 1px solid rgba(59, 35, 20, 0.2);
+    }
+    .nav-right.open { display: flex; }
+    .nav-right a {
+        padding: 12px 0;
+        font-size: 15px;
+        border-bottom: 1px solid rgba(59, 35, 20, 0.1);
+    }
+
+    /* Hero */
+    .hero { min-height: 420px; padding: 60px 0; }
+    .hero::after { background: rgba(0, 0, 0, 0.5); }
+    .hero-content { padding: 0 24px; max-width: 100%; }
+    .hero-content h1 { font-size: 34px; }
+    .hero-content p { max-width: 100%; font-size: 14px; }
+    .hero-btns { flex-wrap: wrap; }
+
+    /* Features */
+    .features { padding: 40px 20px; }
+    .section-title { font-size: 26px; margin-bottom: 24px; }
+
+    /* Why section */
+    .why-left { flex-direction: column; min-height: 0; }
+    .why-text { padding: 36px 24px; }
+    .why-img { flex: none; height: 240px; }
+    .why-right { padding: 40px 24px; }
+    .why-right h2 { font-size: 26px; }
+
+    /* Visit section: 2 cards per row */
+    .visit-section { padding: 40px 20px; gap: 28px; }
+    .visit-left h2 { font-size: 26px; }
+    .visit-btns { flex-wrap: wrap; }
+    .visit-right { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+    .menu-info { padding: 10px; }
+    .menu-name { font-size: 14px; }
+    .menu-sub,
+    .menu-num { font-size: 12px; }
+
+    /* Footer banner */
+    .footer-banner-content { padding: 36px 24px; }
+    .footer-banner-img { height: 220px; }
+}
+
+
+/* ---------- Small phones (up to 480px) ---------- */
+@media (max-width: 480px) {
+    .hero-content h1 { font-size: 28px; }
+    .btn-outline,
+    .btn-fill { flex: 1 1 auto; }
+
+    /* Features: one card per row */
+    .features-grid { grid-template-columns: 1fr; }
+    .feature-card,
+    .feature-card:nth-child(odd) { border-right: none; }
+    .feature-card:nth-child(-n+2) { border-bottom: none; }
+    .feature-card:not(:last-child) { border-bottom: 2px solid var(--tan); }
+
+    .why-text h2 { font-size: 24px; }
+    .menu-card img { height: 110px; }
 }

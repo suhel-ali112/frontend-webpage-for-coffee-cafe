@@ -1,21 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Coffee - Savor the Perfect Brew</title>
+
+    <!-- Fonts and icons -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;800&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- Main stylesheet -->
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="responsive.css">
 </head>
+
 <body>
 
-    
+    <!-- ============ NAVBAR ============ -->
     <nav>
         <div class="nav-left">
-            <span class="logo">Coffee</span>
+            <span class="logo">Cardabun</span>
+            <i class="fa-solid fa-mug-hot"></i>
         </div>
-        <div class="nav-right">
+
+        <!-- Hamburger button (visible on mobile only) -->
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navMenu">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="nav-right" id="navMenu">
             <a href="#">Home</a>
             <a href="#">Menu</a>
             <a href="#">Our</a>
@@ -25,11 +38,15 @@
         </div>
     </nav>
 
-   
+
+    <!-- ============ HERO ============ -->
     <section class="hero">
         <div class="hero-content">
             <h1>Savor the Perfect<br>Brew!</h1>
-            <p>Great pleasure starts with the finest beans, fresh roasted and ground to perfection. Enjoy the rich flavor and smooth aroma of our signature blends.</p>
+            <p>
+                Great pleasure starts with the finest beans, fresh roasted and ground to perfection.
+                Enjoy the rich flavor and smooth aroma of our signature blends.
+            </p>
             <div class="hero-btns">
                 <button class="btn-outline">Order Now</button>
                 <button class="btn-fill">Learn More</button>
@@ -37,111 +54,152 @@
         </div>
     </section>
 
-    
+
+    <!-- ============ FEATURES ============ -->
     <section class="features">
         <h2 class="section-title">Features</h2>
+
         <div class="features-grid">
+
             <div class="feature-card">
                 <div class="feature-icon">
                     <img src="https://cdn-icons-png.flaticon.com/512/924/924514.png" alt="Espresso">
                 </div>
                 <h4>Espresso</h4>
-                <p>Experience the bold essence of coffee. Our signature espresso features a rich aroma, dense crema, and a deeply satisfying finish to kickstart your day.</p>
+                <p>
+                    Experience the bold essence of coffee. Our signature espresso features a rich aroma,
+                    dense crema, and a deeply satisfying finish to kickstart your day.
+                </p>
             </div>
+
             <div class="feature-card">
                 <div class="feature-icon">
                     <img src="https://cdn-icons-png.flaticon.com/512/2935/2935323.png" alt="Latte">
                 </div>
                 <h4>Latte</h4>
-                <p>A smooth harmony of flavors. We combine a shot of rich espresso with perfectly steamed milk, topped with a delicate layer of creamy foam.</p>
+                <p>
+                    A smooth harmony of flavors. We combine a shot of rich espresso with perfectly
+                    steamed milk, topped with a delicate layer of creamy foam.
+                </p>
             </div>
+
             <div class="feature-card">
                 <div class="feature-icon">
                     <img src="https://cdn-icons-png.flaticon.com/512/3081/3081986.png" alt="Cold Brew">
                 </div>
                 <h4>Cold Brew</h4>
-                <p>Slow-steeped for maximum smoothness. Brewed in cold water for 16 hours to eliminate bitterness and bring out a naturally sweet flavor.</p>
+                <p>
+                    Slow-steeped for maximum smoothness. Brewed in cold water for 16 hours to eliminate
+                    bitterness and bring out a naturally sweet flavor.
+                </p>
             </div>
+
             <div class="feature-card">
                 <div class="feature-icon">
                     <img src="https://cdn-icons-png.flaticon.com/512/1046/1046751.png" alt="Macchiato">
                 </div>
                 <h4>Macchiato</h4>
-                <p>Bold espresso meets a touch of cream. A rich shot of espresso gently stained with a dollop of velvety, steamed milk foam.</p>
+                <p>
+                    Bold espresso meets a touch of cream. A rich shot of espresso gently stained with
+                    a dollop of velvety, steamed milk foam.
+                </p>
             </div>
+
         </div>
     </section>
 
-   
+
+    <!-- ============ WHY CHOOSE US ============ -->
     <section class="why-section">
-        
+
+        <!-- Left side: text + image -->
         <div class="why-left">
             <div class="why-text">
                 <h2>Why Choose<br>Us?</h2>
-                <p>We source only the finest single-origin beans and roast them in-house for peak freshness. Every cup is crafted with precision and passion by our expert baristas.</p>
+                <p>
+                    We source only the finest single-origin beans and roast them in-house for peak freshness.
+                    Every cup is crafted with precision and passion by our expert baristas.
+                </p>
                 <button class="btn-light">SAMPLE ONE</button>
             </div>
             <div class="why-img">
                 <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=400&q=80" alt="Coffee">
             </div>
         </div>
-        
+
+        <!-- Right side: opening hours -->
         <div class="why-right">
             <h4>Operating hours</h4>
             <h2>Open 7am – 10pm</h2>
-            <p>We're open every day of the week so you never have to go without your favorite brew. Come visit us at our cozy café or order online for delivery.</p>
+            <p>
+                We're open every day of the week so you never have to go without your favorite brew.
+                Come visit us at our cozy café or order online for delivery.
+            </p>
             <button class="btn-dark">FIND US TODAY</button>
         </div>
+
     </section>
 
-   
+
+    <!-- ============ VISIT / MENU ============ -->
     <section class="visit-section">
+
         <div class="visit-left">
             <span class="visit-tag">☕ Come Visit</span>
-            <h2>Morning Happy </h2>
-            <p>Start your morning right with our freshly brewed coffee. Every sip is a moment of joy, crafted with love and the finest ingredients.</p>
+            <h2>Morning Happy</h2>
+            <p>
+                Start your morning right with our freshly brewed coffee. Every sip is a moment of joy,
+                crafted with love and the finest ingredients.
+            </p>
             <div class="visit-btns">
                 <button class="btn-outline-dark">ABOUT US</button>
                 <button class="btn-dark">BUY NOW</button>
             </div>
         </div>
+
         <div class="visit-right">
+
             <div class="menu-card">
                 <img src="https://images.unsplash.com/photo-1561882468-9110e03e0f78?w=200&q=80" alt="Coffee 1">
                 <div class="menu-info">
                     <p class="menu-name">Cortado</p>
                     <p class="menu-sub">Concalo L 100₹</p>
-                    <span class="menu-num">1 </span>
+                    <span class="menu-num">1</span>
                 </div>
             </div>
+
             <div class="menu-card">
                 <img src="https://images.unsplash.com/photo-1497636577773-f1231844b336?w=200&q=80" alt="Coffee 2">
                 <div class="menu-info">
                     <p class="menu-name">Flat White</p>
                     <p class="menu-sub">Concalo 4G 150₹</p>
-                    <span class="menu-num">2 </span>
+                    <span class="menu-num">2</span>
                 </div>
             </div>
+
             <div class="menu-card">
                 <img src="https://images.unsplash.com/photo-1453614512568-c4024d13c247?w=200&q=80" alt="Coffee 3">
                 <div class="menu-info">
                     <p class="menu-name">Americano</p>
                     <p class="menu-sub">Ciminal 7T 130₹</p>
-                    <span class="menu-num">3 </span>
+                    <span class="menu-num">3</span>
                 </div>
             </div>
+
             <div class="menu-card">
                 <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=200&q=80" alt="Coffee 4">
                 <div class="menu-info">
                     <p class="menu-name">Cortado L</p>
                     <p class="menu-sub">Concolic L 100₹</p>
-                    <span class="menu-num">4 </span>
+                    <span class="menu-num">4</span>
                 </div>
             </div>
+
         </div>
     </section>
 
-   
+
+    <!-- ============ FOOTER BANNER ============ -->
     <section class="footer-banner">
         <div class="footer-banner-content">
             <h2>Win Your Morning</h2>
@@ -153,6 +211,30 @@
             <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=700&q=80" alt="Coffee spread">
         </div>
     </section>
+
+
+    <!-- ============ SCRIPT: mobile menu toggle ============ -->
+    <script>
+        const toggleButton = document.getElementById('navToggle');
+        const menu = document.getElementById('navMenu');
+        const icon = toggleButton.querySelector('i');
+
+        function setMenu(isOpen) {
+            menu.classList.toggle('open', isOpen);
+            toggleButton.setAttribute('aria-expanded', isOpen);
+            icon.className = isOpen ? 'fa-solid fa-xmark' : 'fa-solid fa-bars';
+        }
+
+        // Open / close when the hamburger is clicked
+        toggleButton.addEventListener('click', () => {
+            setMenu(!menu.classList.contains('open'));
+        });
+
+        // Close the menu after a link is clicked
+        menu.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => setMenu(false));
+        });
+    </script>
 
 </body>
 </html>
